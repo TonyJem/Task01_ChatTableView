@@ -28,6 +28,9 @@
                     <constraint firstItem="OaQ-Xm-aac" firstAttribute="leading" secondItem="RUu-PM-HX9" secondAttribute="leading" id="tyD-gd-Tz7"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="topView" destination="OaQ-Xm-aac" id="KVY-qa-GdP"/>
+            </connections>
             <point key="canvasLocation" x="-220" y="81"/>
         </tableViewCell>
     </objects>

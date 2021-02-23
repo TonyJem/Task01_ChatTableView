@@ -20,6 +20,13 @@ class TopView: UIView {
         commonInit()
     }
     
+    func fill(model: User) {
+        userImageView.image = model.image
+        nameLabel.text = model.name
+        likeCountLabel.text = "\(model.likeCount ?? 0)"
+        textLabel.text = model.text
+    }
+    
     @IBAction func likButtonTapped(_ sender: Any) {
     }
 }
