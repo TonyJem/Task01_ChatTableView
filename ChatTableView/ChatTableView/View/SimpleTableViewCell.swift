@@ -16,6 +16,7 @@ class SimpleTableViewCell: UITableViewCell {
         contentTextLabel.text = model.text
     }
     
-    @IBAction func likButtonTapped(_ sender: Any) {
+    @IBAction func likeButtonTapped(_ sender: Any) {
+        print("🟢 Like Button Tapped")
     }
 }
