@@ -27,20 +27,19 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = SimpleTableViewCell()
-        
-        if list[indexPath.row].picture != nil {
-            
-            guard let currentCell = usersTableView.dequeueReusableCell(withIdentifier: String(describing: ImageTableViewCell.self), for: indexPath) as? ImageTableViewCell else { return UITableViewCell() }
-            cell = currentCell
-            
-        } else {
-            guard let currentCell = usersTableView.dequeueReusableCell(withIdentifier: String(describing: SimpleTableViewCell.self), for: indexPath) as? SimpleTableViewCell else { return UITableViewCell() }
-            cell = currentCell
-        }
+        list[indexPath.row].hasPicture ? useImageTableViewCell(for: indexPath) : useSimpleTableViewCell(for: indexPath)
+    }
     
-        
+    private func useSimpleTableViewCell(for indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = usersTableView.dequeueReusableCell(withIdentifier: String(describing: SimpleTableViewCell.self), for: indexPath) as? SimpleTableViewCell else { return UITableViewCell() }
         cell.fill(model: list[indexPath.row])
         return cell
     }
+    
+    private func useImageTableViewCell(for indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = usersTableView.dequeueReusableCell(withIdentifier: String(describing: ImageTableViewCell.self), for: indexPath) as? ImageTableViewCell else { return UITableViewCell() }
+        cell.fill(model: list[indexPath.row])
+        return cell
+    }
+    
 }

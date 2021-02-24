@@ -7,4 +7,8 @@ struct User {
     let text: String?
     let likeCount: Int?
     let picture: UIImage?
+    
+    var hasPicture: Bool {
+        return picture != nil
+    }
 }
