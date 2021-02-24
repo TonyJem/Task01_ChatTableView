@@ -2,7 +2,7 @@ import UIKit
 
 class ImageTableViewCell: SimpleTableViewCell {
     private struct Constants {
-        static let pictureRadius: CGFloat = 10
+        static let pictureRadius: CGFloat = 15
     }
     
     @IBOutlet var bottomImageView: UIImageView!
