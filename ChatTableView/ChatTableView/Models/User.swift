@@ -3,7 +3,8 @@ import UIKit
 struct User {
     let name: String
     let date: Date
-    let image: UIImage?
+    let photo: UIImage?
     let text: String?
     let likeCount: Int?
+    let picture: UIImage?
 }

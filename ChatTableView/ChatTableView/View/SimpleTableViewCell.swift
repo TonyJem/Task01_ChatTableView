@@ -10,7 +10,7 @@ class SimpleTableViewCell: UITableViewCell {
     @IBOutlet var contentTextLabel: UILabel!
    
     func fill(model: User) {
-        userImageView.image = model.image
+        userImageView.image = model.photo
         userImageView.layer.cornerRadius = userImageView.frame.width / 2
         userImageView.clipsToBounds = true
         
@@ -24,6 +24,7 @@ class SimpleTableViewCell: UITableViewCell {
     }
     
     @IBAction func likeButtonTapped(_ sender: Any) {
+//    TODO: Button tap test
         print("🟢 Like Button Tapped")
     }
 }
