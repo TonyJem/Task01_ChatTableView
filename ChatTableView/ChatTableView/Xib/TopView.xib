@@ -8,16 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopView" customModule="ChatTableView" customModuleProvider="target">
-            <connections>
-                <outlet property="dateLabel" destination="I1c-m8-yDm" id="Lrf-HG-1Se"/>
-                <outlet property="likeButton" destination="sh1-TZ-lMh" id="PMt-wP-NgA"/>
-                <outlet property="likeCountLabel" destination="ZEq-hx-1nR" id="T1b-vg-keT"/>
-                <outlet property="nameLabel" destination="p9v-5J-elg" id="apv-JM-JNs"/>
-                <outlet property="textLabel" destination="WWk-0u-ZbG" id="B8S-CU-DwW"/>
-                <outlet property="userImageView" destination="s6U-LI-IBt" id="g9o-8Z-K6S"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopView" customModule="ChatTableView" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="145"/>
@@ -58,9 +49,6 @@
                         <constraint firstAttribute="height" constant="40" id="kNI-Kl-Ms5"/>
                     </constraints>
                     <state key="normal" title="👍"/>
-                    <connections>
-                        <action selector="likButtonTapped:" destination="-1" eventType="touchUpInside" id="6kp-mv-0eq"/>
-                    </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t46-Q2-uU0">
                     <rect key="frame" x="95" y="45" width="304" height="2"/>

@@ -29,6 +29,9 @@
                             <constraint firstAttribute="width" secondItem="lM6-yo-oTn" secondAttribute="height" multiplier="1:1" id="qfd-YZ-mWh"/>
                         </constraints>
                         <state key="normal" title="👍"/>
+                        <connections>
+                            <action selector="likButtonTapped:" destination="GzP-RS-Suo" eventType="touchUpInside" id="e7R-nk-xEd"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOK-qM-mML">
                         <rect key="frame" x="24" y="105" width="42.5" height="20"/>
@@ -93,6 +96,14 @@
                     <constraint firstItem="MCp-R4-Q4c" firstAttribute="top" secondItem="jnR-dd-6kd" secondAttribute="bottom" constant="13" id="xTc-Cf-7BE"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="contentTextLabel" destination="Tw0-rp-aL1" id="5oR-0C-cmE"/>
+                <outlet property="dateLabel" destination="jnR-dd-6kd" id="XxX-Iw-LwP"/>
+                <outlet property="likeButton" destination="lM6-yo-oTn" id="1uO-X8-Bs0"/>
+                <outlet property="likeCountLabel" destination="qOK-qM-mML" id="j83-xf-sK7"/>
+                <outlet property="nameLabel" destination="dZc-bY-2TF" id="vPe-D5-Nuk"/>
+                <outlet property="userImageView" destination="St5-As-CLA" id="yd8-k7-J79"/>
+            </connections>
             <point key="canvasLocation" x="-257" y="-182"/>
         </tableViewCell>
     </objects>

@@ -27,7 +27,7 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = usersTableView.dequeueReusableCell(withIdentifier: String(describing: SimpleTableViewCell.self), for: indexPath) as? SimpleTableViewCell else { return UITableViewCell() }
         
-        cell.topView.fill(model: list[indexPath.row])
+        cell.fill(model: list[indexPath.row])
         return cell
     }
 }
