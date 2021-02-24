@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2662A5E25E5E71000832D71 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2662A5D25E5E71000832D71 /* ImageTableViewCell.xib */; };
+		C2662A6125E5E72B00832D71 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2662A6025E5E72B00832D71 /* ImageTableViewCell.swift */; };
 		C2E2753B25E58E8500AD411C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E2753A25E58E8500AD411C /* AppDelegate.swift */; };
 		C2E2753D25E58E8500AD411C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E2753C25E58E8500AD411C /* SceneDelegate.swift */; };
 		C2E2753F25E58E8500AD411C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E2753E25E58E8500AD411C /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C2662A5D25E5E71000832D71 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
+		C2662A6025E5E72B00832D71 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		C2E2753725E58E8500AD411C /* ChatTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E2753A25E58E8500AD411C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2E2753C25E58E8500AD411C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 			children = (
 				C2E2755625E5961800AD411C /* TopView.swift */,
 				C2E2755C25E5A2C500AD411C /* SimpleTableViewCell.swift */,
+				C2662A6025E5E72B00832D71 /* ImageTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 			children = (
 				C2E2755225E595C500AD411C /* TopView.xib */,
 				C2E2755925E5A29A00AD411C /* SimpleTableViewCell.xib */,
+				C2662A5D25E5E71000832D71 /* ImageTableViewCell.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -174,6 +180,7 @@
 				C2E2755325E595C500AD411C /* TopView.xib in Resources */,
 				C2E2755A25E5A29A00AD411C /* SimpleTableViewCell.xib in Resources */,
 				C2E2754725E58E8500AD411C /* LaunchScreen.storyboard in Resources */,
+				C2662A5E25E5E71000832D71 /* ImageTableViewCell.xib in Resources */,
 				C2E2754425E58E8500AD411C /* Assets.xcassets in Resources */,
 				C2E2754225E58E8500AD411C /* Main.storyboard in Resources */,
 			);
@@ -186,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2662A6125E5E72B00832D71 /* ImageTableViewCell.swift in Sources */,
 				C2E2753F25E58E8500AD411C /* ViewController.swift in Sources */,
 				C2E2756125E5B18400AD411C /* User.swift in Sources */,
 				C2E2753B25E58E8500AD411C /* AppDelegate.swift in Sources */,
