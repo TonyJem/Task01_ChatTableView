@@ -17,9 +17,9 @@ class SimpleTableViewCell: UITableViewCell {
         
         setupCellUI()
         setupContainerViewUI()
-        setupUserImageContainerView()
+        setupUserImageContainerViewUI()
         setupSeparatorUI()
-        setupUserImageViewView()
+        setupUserImageViewViewUI()
     }
     
     func fill(model: User) {
@@ -50,22 +50,21 @@ private extension SimpleTableViewCell {
         containerView.layer.shadowRadius = Constants.containerViewShadowRadius
         containerView.layer.shadowOpacity = Constants.containerViewShadowOpacity
         containerView.layer.shadowOffset = Constants.containerViewShadowOffset
-       
     }
     
-    func setupUserImageContainerView() {
+    func setupUserImageContainerViewUI() {
         userImageContainerView.layer.cornerRadius = userImageContainerView.frame.width/2
-        userImageContainerView.layer.shadowColor = Colors.shadowColor
-        userImageContainerView.layer.shadowOffset = CGSize(width: 10, height: 10)
-        userImageContainerView.layer.shadowRadius = 8
-        userImageContainerView.layer.shadowOpacity = 0.4
+        userImageContainerView.layer.shadowColor = Constants.userImageContainerViewShadowColor
+        userImageContainerView.layer.shadowRadius = Constants.userImageContainerViewShadowRadius
+        userImageContainerView.layer.shadowOpacity = Constants.userImageContainerViewShadowOpacity
+        userImageContainerView.layer.shadowOffset = Constants.userImageContainerViewShadowOffset
     }
     
     func setupSeparatorUI() {
         separatorLineView.backgroundColor = Colors.mainBackground
     }
     
-    func setupUserImageViewView() {
+    func setupUserImageViewViewUI() {
         userImageView.layer.cornerRadius = userImageView.frame.width/2
         userImageView.clipsToBounds = true
     }
