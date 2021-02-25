@@ -14,6 +14,7 @@ class ImageTableViewCell: SimpleTableViewCell {
             postImageContainer.layer.shadowOpacity = 0.2
         }
     }
+    
     @IBOutlet private var postImageView: UIImageView!
     
     override func fill(model: User) {
