@@ -121,7 +121,6 @@
                 <outlet property="likeButton" destination="fyo-iL-qbq" id="EFb-9E-9dL"/>
                 <outlet property="likeCountLabel" destination="ata-lT-Yw1" id="yZq-rH-PTo"/>
                 <outlet property="nameLabel" destination="T9N-em-aAs" id="PQa-Nd-pnd"/>
-                <outlet property="separatorLineView" destination="5UV-Wh-0YV" id="rOh-Px-AzT"/>
                 <outlet property="userImageContainerView" destination="TPc-Lv-Fm8" id="KWB-Rv-s9L"/>
                 <outlet property="userImageView" destination="ahy-pR-J9Z" id="cGk-PJ-BIA"/>
             </connections>

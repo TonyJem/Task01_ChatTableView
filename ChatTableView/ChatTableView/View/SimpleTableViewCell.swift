@@ -34,15 +34,13 @@ class SimpleTableViewCell: UITableViewCell {
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
-    @IBOutlet var separatorLineView: UIView!
     @IBOutlet var likeButton: UIButton!
     @IBOutlet var likeCountLabel: UILabel!
     @IBOutlet var contentTextLabel: UILabel!
-    
-    override func didMoveToSuperview() {
-        separatorLineView.backgroundColor = UIColor(red: 239/255, green: 244/255, blue: 250/255, alpha: 1)
+   
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
-    
     
     func fill(model: User) {
         userImageView.image = model.photo

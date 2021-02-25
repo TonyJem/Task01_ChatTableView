@@ -49,38 +49,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3ADD6A4D25E837B30018344C /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				C2E2754025E58E8500AD411C /* Main.storyboard */,
-			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		3ADD6A4E25E837F70018344C /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				C2E2753A25E58E8500AD411C /* AppDelegate.swift */,
-				C2E2753C25E58E8500AD411C /* SceneDelegate.swift */,
-				C2E2754525E58E8500AD411C /* LaunchScreen.storyboard */,
-				C2E2754825E58E8500AD411C /* Info.plist */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		3ADD6A4F25E838400018344C /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				C2E2754325E58E8500AD411C /* Assets.xcassets */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		C2E2752E25E58E8500AD411C = {
 			isa = PBXGroup;
 			children = (
 				C2E2753925E58E8500AD411C /* ChatTableView */,
-				3ADD6A4F25E838400018344C /* Resources */,
 				C2E2753825E58E8500AD411C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,12 +68,16 @@
 		C2E2753925E58E8500AD411C /* ChatTableView */ = {
 			isa = PBXGroup;
 			children = (
-				3ADD6A4E25E837F70018344C /* Common */,
-				3ADD6A4D25E837B30018344C /* Storyboards */,
 				C2E2755125E5955400AD411C /* Xib */,
-				C2E2755F25E5B16100AD411C /* Model */,
 				C2E2755025E5954C00AD411C /* View */,
 				C2E2754F25E5954200AD411C /* Controller */,
+				C2E2755F25E5B16100AD411C /* Models */,
+				C2E2753A25E58E8500AD411C /* AppDelegate.swift */,
+				C2E2753C25E58E8500AD411C /* SceneDelegate.swift */,
+				C2E2754025E58E8500AD411C /* Main.storyboard */,
+				C2E2754325E58E8500AD411C /* Assets.xcassets */,
+				C2E2754525E58E8500AD411C /* LaunchScreen.storyboard */,
+				C2E2754825E58E8500AD411C /* Info.plist */,
 			);
 			path = ChatTableView;
 			sourceTree = "<group>";
@@ -133,12 +109,12 @@
 			path = Xib;
 			sourceTree = "<group>";
 		};
-		C2E2755F25E5B16100AD411C /* Model */ = {
+		C2E2755F25E5B16100AD411C /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				C2E2756025E5B18400AD411C /* User.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
