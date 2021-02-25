@@ -49,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A71479525E83B04008F6FDB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C2E2754025E58E8500AD411C /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		C2E2752E25E58E8500AD411C = {
 			isa = PBXGroup;
 			children = (
@@ -72,10 +80,9 @@
 				C2E2755025E5954C00AD411C /* View */,
 				C2E2754F25E5954200AD411C /* Controller */,
 				C2E2755F25E5B16100AD411C /* Models */,
+				C2E2754325E58E8500AD411C /* Assets.xcassets */,
 				C2E2753A25E58E8500AD411C /* AppDelegate.swift */,
 				C2E2753C25E58E8500AD411C /* SceneDelegate.swift */,
-				C2E2754025E58E8500AD411C /* Main.storyboard */,
-				C2E2754325E58E8500AD411C /* Assets.xcassets */,
 				C2E2754525E58E8500AD411C /* LaunchScreen.storyboard */,
 				C2E2754825E58E8500AD411C /* Info.plist */,
 			);
@@ -113,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				C2E2756025E5B18400AD411C /* User.swift */,
+				3A71479525E83B04008F6FDB /* Storyboards */,
 			);
 			path = Models;
 			sourceTree = "<group>";
