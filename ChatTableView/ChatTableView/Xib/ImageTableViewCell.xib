@@ -142,6 +142,7 @@
                 <outlet property="nameLabel" destination="D5s-bU-ub7" id="aUF-KI-hrR"/>
                 <outlet property="postImageContainer" destination="ATh-nx-KNP" id="7Ve-NM-E5X"/>
                 <outlet property="postImageView" destination="x1f-Uu-V6F" id="4gy-Ux-P76"/>
+                <outlet property="separatorLineView" destination="eX7-3h-SPo" id="SDI-vy-EGN"/>
                 <outlet property="userImageContainerView" destination="Koi-Mx-9zj" id="d5G-xr-xuB"/>
                 <outlet property="userImageView" destination="pD1-vP-7dj" id="xkv-kf-F0i"/>
             </connections>
