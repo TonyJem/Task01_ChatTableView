@@ -13,10 +13,11 @@ class SimpleTableViewCell: UITableViewCell {
     @IBOutlet private var contentTextLabel: UILabel!
     
     override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+        
         setupCellUI()
         setupContainerViewUI()
         setupUserImageContainerView()
-        setupUserImageView()
         setupSeparatorUI()
     }
     
@@ -58,11 +59,6 @@ private extension SimpleTableViewCell {
         userImageContainerView.layer.shadowRadius = 8
         userImageContainerView.layer.shadowOpacity = 0.2
         userImageContainerView.clipsToBounds = true
-    }
-    
-    func setupUserImageView() {
-        userImageView.layer.cornerRadius = userImageView.frame.width / 2
-        userImageView.clipsToBounds = true
     }
     
     func setupSeparatorUI() {
