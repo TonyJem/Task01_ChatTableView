@@ -11,26 +11,23 @@ class ImageTableViewCell: SimpleTableViewCell {
     
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
-        setupPostImage()
+        setupPostImageContainer()
     }
     
     override func fill(model: User) {
         super.fill(model: model)
         
         postImageView.image = model.picture
-        postImageView.layer.cornerRadius = Constants.pictureRadius
-        postImageView.clipsToBounds = true
     }
 }
 
 private extension ImageTableViewCell {
     
-    func setupPostImage() {
+    func setupPostImageContainer() {
         postImageContainer.layer.cornerRadius = 10
         postImageContainer.layer.shadowColor = Colors.shadowColor
         postImageContainer.layer.shadowOffset = CGSize(width: 5, height: 5)
         postImageContainer.layer.shadowRadius = 5
         postImageContainer.layer.shadowOpacity = 0.2
     }
-    
 }
