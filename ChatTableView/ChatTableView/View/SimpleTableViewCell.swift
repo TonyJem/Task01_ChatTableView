@@ -23,10 +23,10 @@ class SimpleTableViewCell: UITableViewCell {
     }
     
     func fill(model: User) {
-        userImageView.image = model.photo
         nameLabel.text = model.name
-        likeCountLabel.text = "\(model.likeCount ?? 0)"
+        userImageView.image = model.photo
         contentTextLabel.text = model.text
+        likeCountLabel.text = "\(model.likeCount ?? 0)"
         
         let dateFormatter = DateFormatter()
         dateFormatter.timeStyle = .short
@@ -44,20 +44,22 @@ private extension SimpleTableViewCell {
     }
 
     func setupContainerViewUI() {
-        containerView.layer.cornerRadius = Constants.containerViewCornerRadius
-        containerView.layer.masksToBounds = Constants.containerViewMasksToBounds
-        containerView.layer.shadowColor = Constants.containerViewShadowColor
-        containerView.layer.shadowRadius = Constants.containerViewShadowRadius
-        containerView.layer.shadowOpacity = Constants.containerViewShadowOpacity
-        containerView.layer.shadowOffset = Constants.containerViewShadowOffset
+        let layer = containerView.layer
+        layer.cornerRadius = Constants.containerViewCornerRadius
+        layer.masksToBounds = Constants.containerViewMasksToBounds
+        layer.shadowColor = Constants.containerViewShadowColor
+        layer.shadowRadius = Constants.containerViewShadowRadius
+        layer.shadowOpacity = Constants.containerViewShadowOpacity
+        layer.shadowOffset = Constants.containerViewShadowOffset
     }
     
     func setupUserImageContainerViewUI() {
-        userImageContainerView.layer.cornerRadius = userImageContainerView.frame.width/2
-        userImageContainerView.layer.shadowColor = Constants.userImageContainerViewShadowColor
-        userImageContainerView.layer.shadowRadius = Constants.userImageContainerViewShadowRadius
-        userImageContainerView.layer.shadowOpacity = Constants.userImageContainerViewShadowOpacity
-        userImageContainerView.layer.shadowOffset = Constants.userImageContainerViewShadowOffset
+        let layer = userImageContainerView.layer
+        layer.cornerRadius = userImageContainerView.frame.width/2
+        layer.shadowColor = Constants.userImageContainerViewShadowColor
+        layer.shadowRadius = Constants.userImageContainerViewShadowRadius
+        layer.shadowOpacity = Constants.userImageContainerViewShadowOpacity
+        layer.shadowOffset = Constants.userImageContainerViewShadowOffset
     }
     
     func setupSeparatorUI() {
