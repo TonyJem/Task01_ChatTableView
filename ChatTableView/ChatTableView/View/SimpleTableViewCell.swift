@@ -44,12 +44,13 @@ private extension SimpleTableViewCell {
     }
 
     func setupContainerViewUI() {
-        containerView.layer.cornerRadius = Constants.containerRadius
-        containerView.layer.masksToBounds = false
-        containerView.layer.shadowRadius = 5
-        containerView.layer.shadowOpacity = 0.1
-        containerView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        containerView.layer.shadowColor = Colors.shadowColor
+        containerView.layer.cornerRadius = Constants.containerViewCornerRadius
+        containerView.layer.masksToBounds = Constants.containerViewMasksToBounds
+        containerView.layer.shadowColor = Constants.containerViewShadowColor
+        containerView.layer.shadowRadius = Constants.containerViewShadowRadius
+        containerView.layer.shadowOpacity = Constants.containerViewShadowOpacity
+        containerView.layer.shadowOffset = Constants.containerViewShadowOffset
+       
     }
     
     func setupUserImageContainerView() {
