@@ -16,7 +16,10 @@ class ViewController: UIViewController {
         usersTableView.register(UINib(nibName: String(describing: SimpleTableViewCell.self), bundle: Bundle.main), forCellReuseIdentifier: String(describing: SimpleTableViewCell.self))
         
         usersTableView.register(UINib(nibName: String(describing: ImageTableViewCell.self), bundle: Bundle.main), forCellReuseIdentifier: String(describing: ImageTableViewCell.self))
+        
         usersTableView.tableFooterView = UIView()
+        
+        usersTableView.backgroundColor = UIColor(red: 239/255, green: 244/255, blue: 250/255, alpha: 1)
     }
     
 }
