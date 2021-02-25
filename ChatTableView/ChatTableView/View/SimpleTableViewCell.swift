@@ -15,7 +15,23 @@ class SimpleTableViewCell: UITableViewCell {
         }
     }
     
-    @IBOutlet var userImageView: UIImageView!
+    @IBOutlet private var userImageContainerView: UIView! {
+        didSet {
+            userImageContainerView.layer.cornerRadius = userImageContainerView.frame.width/2
+            userImageContainerView.layer.shadowColor = UIColor.darkGray.cgColor
+            userImageContainerView.layer.shadowOffset = CGSize(width: 10, height: 10)
+            userImageContainerView.layer.shadowRadius = 8
+            userImageContainerView.layer.shadowOpacity = 0.2
+        }
+    }
+    
+    @IBOutlet var userImageView: UIImageView! {
+        didSet {
+            userImageView.layer.cornerRadius = userImageView.frame.width / 2
+            userImageView.clipsToBounds = true
+        }
+    }
+    
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var likeButton: UIButton!
@@ -28,9 +44,6 @@ class SimpleTableViewCell: UITableViewCell {
     
     func fill(model: User) {
         userImageView.image = model.photo
-        userImageView.layer.cornerRadius = userImageView.frame.width / 2
-        userImageView.clipsToBounds = true
-        
         nameLabel.text = model.name
         likeCountLabel.text = "\(model.likeCount ?? 0)"
         contentTextLabel.text = model.text
@@ -41,7 +54,5 @@ class SimpleTableViewCell: UITableViewCell {
     }
     
     @IBAction func likeButtonTapped(_ sender: Any) {
-//    TODO: Button tap test
-        print("🟢 Like Button Tapped")
     }
 }
