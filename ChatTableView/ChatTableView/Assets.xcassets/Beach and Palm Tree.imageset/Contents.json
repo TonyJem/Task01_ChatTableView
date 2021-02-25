@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Beach and Palm Tree.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
