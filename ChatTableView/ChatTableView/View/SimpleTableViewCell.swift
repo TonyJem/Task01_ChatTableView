@@ -2,36 +2,9 @@ import UIKit
 
 class SimpleTableViewCell: UITableViewCell {
     
-    @IBOutlet private var containerView: UIView! {
-        didSet {
-            backgroundColor = UIColor(red: 239/255, green: 244/255, blue: 250/255, alpha: 1)
-            containerView.layer.cornerRadius = 15
-            containerView.clipsToBounds = true
-            containerView.layer.masksToBounds = false
-            containerView.layer.shadowRadius = 5
-            containerView.layer.shadowOpacity = 0.1
-            containerView.layer.shadowOffset = CGSize(width: 0, height: 0)
-            containerView.layer.shadowColor = UIColor.gray.cgColor
-        }
-    }
-    
-    @IBOutlet private var userImageContainerView: UIView! {
-        didSet {
-            userImageContainerView.layer.cornerRadius = userImageContainerView.frame.width/2
-            userImageContainerView.layer.shadowColor = UIColor.darkGray.cgColor
-            userImageContainerView.layer.shadowOffset = CGSize(width: 10, height: 10)
-            userImageContainerView.layer.shadowRadius = 8
-            userImageContainerView.layer.shadowOpacity = 0.2
-        }
-    }
-    
-    @IBOutlet private var userImageView: UIImageView! {
-        didSet {
-            userImageView.layer.cornerRadius = userImageView.frame.width / 2
-            userImageView.clipsToBounds = true
-        }
-    }
-    
+    @IBOutlet private var containerView: UIView!
+    @IBOutlet private var userImageContainerView: UIView!
+    @IBOutlet private var userImageView: UIImageView!
     @IBOutlet private var nameLabel: UILabel!
     @IBOutlet private var dateLabel: UILabel!
     @IBOutlet private var separatorLineView: UIView!
@@ -40,9 +13,12 @@ class SimpleTableViewCell: UITableViewCell {
     @IBOutlet private var contentTextLabel: UILabel!
     
     override func didMoveToSuperview() {
-        separatorLineView.backgroundColor = UIColor(red: 239/255, green: 244/255, blue: 250/255, alpha: 1)
+        setupCellUI()
+        setupContainerViewUI()
+        setupUserImageContainerView()
+        setupUserImageView()
+        setupSeparatorUI()
     }
-    
     
     func fill(model: User) {
         userImageView.image = model.photo
@@ -57,4 +33,40 @@ class SimpleTableViewCell: UITableViewCell {
     
     @IBAction private func likeButtonTapped(_ sender: Any) {
     }
+}
+
+private extension SimpleTableViewCell {
+    
+    func setupCellUI() {
+        self.backgroundColor = UIColor(red: 239/255, green: 244/255, blue: 250/255, alpha: 1)
+    }
+
+    func setupContainerViewUI() {
+        containerView.layer.cornerRadius = 15
+        containerView.clipsToBounds = true
+        containerView.layer.masksToBounds = false
+        containerView.layer.shadowRadius = 5
+        containerView.layer.shadowOpacity = 0.1
+        containerView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        containerView.layer.shadowColor = UIColor.gray.cgColor
+    }
+    
+    func setupUserImageContainerView() {
+        userImageContainerView.layer.cornerRadius = userImageContainerView.frame.width/2
+        userImageContainerView.layer.shadowColor = UIColor.darkGray.cgColor
+        userImageContainerView.layer.shadowOffset = CGSize(width: 10, height: 10)
+        userImageContainerView.layer.shadowRadius = 8
+        userImageContainerView.layer.shadowOpacity = 0.2
+        userImageContainerView.clipsToBounds = true
+    }
+    
+    func setupUserImageView() {
+        userImageView.layer.cornerRadius = userImageView.frame.width / 2
+        userImageView.clipsToBounds = true
+    }
+    
+    func setupSeparatorUI() {
+        separatorLineView.backgroundColor = UIColor(red: 239/255, green: 244/255, blue: 250/255, alpha: 1)
+    }
+    
 }
