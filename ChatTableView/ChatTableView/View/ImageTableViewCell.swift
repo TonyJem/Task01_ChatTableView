@@ -2,10 +2,6 @@ import UIKit
 
 class ImageTableViewCell: SimpleTableViewCell {
     
-    private struct Constants {
-        static let pictureRadius: CGFloat = 10
-    }
-    
     @IBOutlet private var postImageContainer: UIView!
     @IBOutlet private var postImageView: UIImageView!
     
@@ -18,16 +14,25 @@ class ImageTableViewCell: SimpleTableViewCell {
         super.fill(model: model)
         
         postImageView.image = model.picture
+        setupPostImageView()
+
     }
 }
 
 private extension ImageTableViewCell {
     
     func setupPostImageContainer() {
-        postImageContainer.layer.cornerRadius = 10
+        postImageContainer.layer.cornerRadius = Constants.imageViewRadius
         postImageContainer.layer.shadowColor = Colors.shadowColor
         postImageContainer.layer.shadowOffset = CGSize(width: 5, height: 5)
         postImageContainer.layer.shadowRadius = 5
         postImageContainer.layer.shadowOpacity = 0.2
     }
+    
+    func setupPostImageView() {
+        
+        postImageView.layer.cornerRadius = Constants.imageViewRadius
+        postImageView.clipsToBounds = true
+    }
+    
 }

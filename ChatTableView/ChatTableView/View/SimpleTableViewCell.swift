@@ -43,7 +43,7 @@ private extension SimpleTableViewCell {
     }
 
     func setupContainerViewUI() {
-        containerView.layer.cornerRadius = UISettings.containerRadius
+        containerView.layer.cornerRadius = Constants.containerRadius
         containerView.clipsToBounds = true
         containerView.layer.masksToBounds = false
         containerView.layer.shadowRadius = 5
