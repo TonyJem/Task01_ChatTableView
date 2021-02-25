@@ -27,7 +27,7 @@ private extension ImageTableViewCell {
     
     func setupPostImage() {
         postImageContainer.layer.cornerRadius = 10
-        postImageContainer.layer.shadowColor = UIColor.darkGray.cgColor
+        postImageContainer.layer.shadowColor = Colors.shadowColor
         postImageContainer.layer.shadowOffset = CGSize(width: 5, height: 5)
         postImageContainer.layer.shadowRadius = 5
         postImageContainer.layer.shadowOpacity = 0.2
