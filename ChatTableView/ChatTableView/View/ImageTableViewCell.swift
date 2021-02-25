@@ -2,36 +2,37 @@ import UIKit
 
 class ImageTableViewCell: SimpleTableViewCell {
     
-    @IBOutlet private var postImageContainer: UIView!
+    @IBOutlet private var postImageContainerView: UIView!
     @IBOutlet private var postImageView: UIImageView!
     
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
-        setupPostImageContainer()
+        
+        setupPostImageContainerUI()
     }
     
     override func fill(model: User) {
         super.fill(model: model)
         
         postImageView.image = model.picture
-        setupPostImageView()
-
+        setupPostImageViewUI()
     }
+    
 }
 
 private extension ImageTableViewCell {
     
-    func setupPostImageContainer() {
-        postImageContainer.layer.cornerRadius = Constants.imageViewRadius
-        postImageContainer.layer.shadowColor = Colors.shadowColor
-        postImageContainer.layer.shadowOffset = CGSize(width: 5, height: 5)
-        postImageContainer.layer.shadowRadius = 5
-        postImageContainer.layer.shadowOpacity = 0.2
+    func setupPostImageContainerUI() {
+        let layer = postImageContainerView.layer
+        layer.cornerRadius = Constants.postImageContainerViewCornerRadius
+        layer.shadowColor = Constants.postImageContainerViewShadowColor
+        layer.shadowRadius = Constants.postImageContainerViewShadowRadius
+        layer.shadowOpacity = Constants.postImageContainerViewShadowOpacity
+        layer.shadowOffset = Constants.postImageContainerViewShadowOffset
     }
     
-    func setupPostImageView() {
-        
-        postImageView.layer.cornerRadius = Constants.imageViewRadius
+    func setupPostImageViewUI() {
+        postImageView.layer.cornerRadius = Constants.postImageViewCornerRadius
         postImageView.clipsToBounds = true
     }
     

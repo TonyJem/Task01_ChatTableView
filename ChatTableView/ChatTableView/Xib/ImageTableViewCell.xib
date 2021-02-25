@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -140,7 +139,7 @@
                 <outlet property="likeButton" destination="rvI-cR-P1F" id="g9L-xh-SKZ"/>
                 <outlet property="likeCountLabel" destination="fMP-Js-cC5" id="CJZ-YI-YOw"/>
                 <outlet property="nameLabel" destination="D5s-bU-ub7" id="aUF-KI-hrR"/>
-                <outlet property="postImageContainer" destination="ATh-nx-KNP" id="7Ve-NM-E5X"/>
+                <outlet property="postImageContainerView" destination="ATh-nx-KNP" id="7Ve-NM-E5X"/>
                 <outlet property="postImageView" destination="x1f-Uu-V6F" id="4gy-Ux-P76"/>
                 <outlet property="separatorLineView" destination="eX7-3h-SPo" id="SDI-vy-EGN"/>
                 <outlet property="userImageContainerView" destination="Koi-Mx-9zj" id="d5G-xr-xuB"/>

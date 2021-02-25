@@ -42,7 +42,7 @@ private extension SimpleTableViewCell {
     func setupCellUI() {
         self.backgroundColor = Colors.mainBackground
     }
-
+    
     func setupContainerViewUI() {
         let layer = containerView.layer
         layer.cornerRadius = Constants.containerViewCornerRadius

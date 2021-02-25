@@ -2,9 +2,6 @@ import UIKit
 
 struct Constants {
     
-
-    static let imageViewRadius: CGFloat = 10
-    
 // MARK: - ContainerViewUI
     static let containerViewCornerRadius: CGFloat = 15
     static let containerViewMasksToBounds = false
@@ -18,5 +15,15 @@ struct Constants {
     static let userImageContainerViewShadowRadius: CGFloat = 8
     static let userImageContainerViewShadowOpacity: Float = 0.4
     static let userImageContainerViewShadowOffset = CGSize(width: 10, height: 10)
+    
+// MARK: - PostImageContainerViewUI
+    static let postImageContainerViewCornerRadius: CGFloat = 10
+    static let postImageContainerViewShadowColor = Colors.shadowColor
+    static let postImageContainerViewShadowRadius: CGFloat = 5
+    static let postImageContainerViewShadowOpacity: Float = 0.4
+    static let postImageContainerViewShadowOffset = CGSize(width: 5, height: 5)
+    
+    // MARK: - PostImageContainerViewUI
+    static let postImageViewCornerRadius: CGFloat = 10
     
 }
