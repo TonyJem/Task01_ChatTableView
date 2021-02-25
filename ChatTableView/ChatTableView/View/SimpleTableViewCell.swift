@@ -25,19 +25,19 @@ class SimpleTableViewCell: UITableViewCell {
         }
     }
     
-    @IBOutlet var userImageView: UIImageView! {
+    @IBOutlet private var userImageView: UIImageView! {
         didSet {
             userImageView.layer.cornerRadius = userImageView.frame.width / 2
             userImageView.clipsToBounds = true
         }
     }
     
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var dateLabel: UILabel!
-    @IBOutlet var separatorLineView: UIView!
-    @IBOutlet var likeButton: UIButton!
-    @IBOutlet var likeCountLabel: UILabel!
-    @IBOutlet var contentTextLabel: UILabel!
+    @IBOutlet private var nameLabel: UILabel!
+    @IBOutlet private var dateLabel: UILabel!
+    @IBOutlet private var separatorLineView: UIView!
+    @IBOutlet private var likeButton: UIButton!
+    @IBOutlet private var likeCountLabel: UILabel!
+    @IBOutlet private var contentTextLabel: UILabel!
     
     override func didMoveToSuperview() {
         separatorLineView.backgroundColor = UIColor(red: 239/255, green: 244/255, blue: 250/255, alpha: 1)
@@ -55,6 +55,6 @@ class SimpleTableViewCell: UITableViewCell {
         dateLabel.text = dateFormatter.string(from: model.date)
     }
     
-    @IBAction func likeButtonTapped(_ sender: Any) {
+    @IBAction private func likeButtonTapped(_ sender: Any) {
     }
 }
