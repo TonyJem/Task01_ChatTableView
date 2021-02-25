@@ -2,11 +2,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet var usersTableView: UITableView!
+    @IBOutlet private var mainView: UIView!
+    @IBOutlet private var usersTableView: UITableView!
     
 //    TODO: testData
     let list: [User] = [
-        User(name: "Test1", date: Date(), photo: UIImage(named: "avatar"), text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", likeCount: 11, picture: nil),
+        User(name: "Test1", date: Date(), photo: UIImage(named: "avatar"), text: "Lorem ipsum", likeCount: 11, picture: nil),
         User(name: "Test2", date: Date(), photo: UIImage(named: "avatar"), text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia, risus at consectetur malesuada, justo magna vehicula purus, sit amet commodo lectus neque vel lacus. Praesent venenatis enim mi. Phasellus semper bibendum commodo. Morbi leo risus, vestibulum id interdum interdum, euismod interdum est. ", likeCount: 22, picture: UIImage(named: "boxedwater")),
         User(name: "Test3", date: Date(), photo: UIImage(named: "avatar"), text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia, risus at consectetur malesuada, justo magna vehicula purus, sit amet commodo lectus neque vel lacus. Praesent venenatis enim mi. Phasellus semper bibendum commodo. Morbi leo risus, vestibulum id interdum interdum, euismod interdum est. ", likeCount: 88, picture: nil)
     ]
@@ -19,6 +20,7 @@ class ViewController: UIViewController {
         
         usersTableView.tableFooterView = UIView()
         
+        mainView.backgroundColor = UIColor(red: 239/255, green: 244/255, blue: 250/255, alpha: 1)
         usersTableView.backgroundColor = UIColor(red: 239/255, green: 244/255, blue: 250/255, alpha: 1)
     }
     
