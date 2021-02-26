@@ -55,22 +55,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3A71479525E83B04008F6FDB /* Storyboards */ = {
+		3A71479525E83B04008F6FDB /* storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				C2E2754025E58E8500AD411C /* Main.storyboard */,
 			);
-			path = Storyboards;
+			path = storyboards;
 			sourceTree = "<group>";
 		};
-		3A71479A25E84F45008F6FDB /* AppSettings */ = {
+		3A71479A25E84F45008F6FDB /* settings */ = {
 			isa = PBXGroup;
 			children = (
 				3A71479B25E84F89008F6FDB /* Colors.swift */,
 				3A71479F25E851E9008F6FDB /* Constants.swift */,
 				3A7147A425E8732F008F6FDB /* UIView+Extension.swift */,
 			);
-			path = AppSettings;
+			path = settings;
 			sourceTree = "<group>";
 		};
 		C2E2752E25E58E8500AD411C = {
@@ -92,12 +92,12 @@
 		C2E2753925E58E8500AD411C /* ChatTableView */ = {
 			isa = PBXGroup;
 			children = (
-				3A71479A25E84F45008F6FDB /* AppSettings */,
-				C2E2755125E5955400AD411C /* Xib */,
-				C2E2755025E5954C00AD411C /* View */,
-				C2E2754F25E5954200AD411C /* Controller */,
-				C2E2755F25E5B16100AD411C /* Models */,
-				3A71479525E83B04008F6FDB /* Storyboards */,
+				3A71479A25E84F45008F6FDB /* settings */,
+				C2E2755125E5955400AD411C /* xib */,
+				C2E2755025E5954C00AD411C /* view */,
+				C2E2754F25E5954200AD411C /* controller */,
+				C2E2755F25E5B16100AD411C /* models */,
+				3A71479525E83B04008F6FDB /* storyboards */,
 				C2E2754325E58E8500AD411C /* Assets.xcassets */,
 				C2E2753A25E58E8500AD411C /* AppDelegate.swift */,
 				C2E2753C25E58E8500AD411C /* SceneDelegate.swift */,
@@ -107,39 +107,39 @@
 			path = ChatTableView;
 			sourceTree = "<group>";
 		};
-		C2E2754F25E5954200AD411C /* Controller */ = {
+		C2E2754F25E5954200AD411C /* controller */ = {
 			isa = PBXGroup;
 			children = (
 				C2E2753E25E58E8500AD411C /* ViewController.swift */,
 			);
-			path = Controller;
+			path = controller;
 			sourceTree = "<group>";
 		};
-		C2E2755025E5954C00AD411C /* View */ = {
+		C2E2755025E5954C00AD411C /* view */ = {
 			isa = PBXGroup;
 			children = (
 				C2E2755625E5961800AD411C /* TopView.swift */,
 				C2E2755C25E5A2C500AD411C /* SimpleTableViewCell.swift */,
 				C2662A6025E5E72B00832D71 /* ImageTableViewCell.swift */,
 			);
-			path = View;
+			path = view;
 			sourceTree = "<group>";
 		};
-		C2E2755125E5955400AD411C /* Xib */ = {
+		C2E2755125E5955400AD411C /* xib */ = {
 			isa = PBXGroup;
 			children = (
 				C2E2755925E5A29A00AD411C /* SimpleTableViewCell.xib */,
 				C2662A5D25E5E71000832D71 /* ImageTableViewCell.xib */,
 			);
-			path = Xib;
+			path = xib;
 			sourceTree = "<group>";
 		};
-		C2E2755F25E5B16100AD411C /* Models */ = {
+		C2E2755F25E5B16100AD411C /* models */ = {
 			isa = PBXGroup;
 			children = (
 				C2E2756025E5B18400AD411C /* Message.swift */,
 			);
-			path = Models;
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
