@@ -1,7 +1,7 @@
 import UIKit
 
 class TopView: UIView {
-    
+    //        TODO: код есть - использования кода нет
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()

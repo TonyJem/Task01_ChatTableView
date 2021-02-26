@@ -6,6 +6,8 @@ class ImageTableViewCell: SimpleTableViewCell {
     @IBOutlet private var postImageView: UIImageView!
     
     override func didMoveToSuperview() {
+        //        TODO: код выносится в отдельные методы только для переиспользования. тут этого нет
+        //        didMoveToSuperview - не работай именно в нем, предложи другие этапы жизненного цикла View
         super.didMoveToSuperview()
         
         setupPostImageContainerUI()

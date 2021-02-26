@@ -1,6 +1,7 @@
 import UIKit
 
 struct Constants {
+    //    TODO: константы которые относятся к настройке определенного класс, должны быть внутри класса. В глобальных константах только то, что нужно проекту в глобальном плане.
     
 // MARK: - ContainerViewUI
     static let containerViewCornerRadius: CGFloat = 15

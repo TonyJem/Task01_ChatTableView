@@ -8,6 +8,7 @@ struct Message {
     let likeCount: Int?
     let picture: UIImage?
     
+    //    TODO: ну такое... не нужная обертка
     var hasPicture: Bool {
         return picture != nil
     }

@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         usersTableView.register(UINib(nibName: String(describing: SimpleTableViewCell.self), bundle: Bundle.main), forCellReuseIdentifier: String(describing: SimpleTableViewCell.self))
         
         usersTableView.register(UINib(nibName: String(describing: ImageTableViewCell.self), bundle: Bundle.main), forCellReuseIdentifier: String(describing: ImageTableViewCell.self))
-        
+        //        TODO: строки 24-27 убрать в настройки .xib
         mainView.backgroundColor = Colors.mainBackground
         usersTableView.backgroundColor = Colors.mainBackground
         usersTableView.tableFooterView = UIView()
@@ -37,7 +37,9 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         list[indexPath.row].hasPicture ? useImageTableViewCell(for: indexPath) : useSimpleTableViewCell(for: indexPath)
     }
-    
+    //        TODO: 1.private методы в private extension
+//    2. не нужная инкапсуляция кода
+//    3. нет обработки нажатия на лайках
     private func useSimpleTableViewCell(for indexPath: IndexPath) -> UITableViewCell {
         guard let cell = usersTableView.dequeueReusableCell(withIdentifier: String(describing: SimpleTableViewCell.self), for: indexPath) as? SimpleTableViewCell else { return UITableViewCell() }
         cell.fill(model: list[indexPath.row])

@@ -1,7 +1,7 @@
 import UIKit
 
 class SimpleTableViewCell: UITableViewCell {
-    
+    //    TODO: не делай Outlet private
     @IBOutlet private var containerView: UIView!
     @IBOutlet private var userImageContainerView: UIView!
     @IBOutlet private var userImageView: UIImageView!
@@ -14,7 +14,8 @@ class SimpleTableViewCell: UITableViewCell {
     
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
-        
+        //        TODO: код выносится в отдельные методы только для переиспользования. тут этого нет
+        //        didMoveToSuperview - не работай именно в нем, предложи другие этапы жизненного цикла View
         setupCellUI()
         setupContainerViewUI()
         setupUserImageContainerViewUI()
