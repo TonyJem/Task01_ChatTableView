@@ -1,5 +1,9 @@
 import UIKit
 
+protocol MessageCellDelegate {
+    func onLikeButton(cell: SimpleTableViewCell)
+}
+
 class SimpleTableViewCell: UITableViewCell {
     private struct Constants {
         static let backgrounColor = Colors.mainBackgroundColor
@@ -23,6 +27,8 @@ class SimpleTableViewCell: UITableViewCell {
     @IBOutlet var likeButton: UIButton!
     @IBOutlet var likeCountLabel: UILabel!
     @IBOutlet var contentTextLabel: UILabel!
+    
+    var delegate: MessageCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -53,7 +59,8 @@ class SimpleTableViewCell: UITableViewCell {
         dateLabel.text = dateFormatter.string(from: model.date)
     }
     
-    //   нет обработки нажатия на лайках
     @IBAction func likeButtonTapped(_ sender: Any) {
+        print("🟢 Button in Xib Tapped")
+        delegate?.onLikeButton(cell: self)
     }
 }

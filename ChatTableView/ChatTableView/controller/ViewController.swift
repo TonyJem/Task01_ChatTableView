@@ -31,7 +31,6 @@ class ViewController: UIViewController {
     
 }
 
-//    3. нет обработки нажатия на лайках
 extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,12 +41,20 @@ extension ViewController: UITableViewDataSource {
         if list[indexPath.row].picture != nil {
             guard let cell = usersTableView.dequeueReusableCell(withIdentifier: String(describing: ImageTableViewCell.self), for: indexPath) as? ImageTableViewCell else { return UITableViewCell() }
             cell.fill(model: list[indexPath.row])
+            cell.delegate = self
             return cell
         } else {
             guard let cell = usersTableView.dequeueReusableCell(withIdentifier: String(describing: SimpleTableViewCell.self), for: indexPath) as? SimpleTableViewCell else { return UITableViewCell() }
             cell.fill(model: list[indexPath.row])
+            cell.delegate = self
             return cell
         }
     }
     
+}
+
+extension ViewController: MessageCellDelegate {
+    func onLikeButton(cell: SimpleTableViewCell) {
+        print("🟢🟢🟢 Delegate received cell!")
+    }
 }
