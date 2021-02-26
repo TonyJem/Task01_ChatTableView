@@ -1,6 +1,7 @@
 import UIKit
 
 class SimpleTableViewCell: UITableViewCell {
+    
     @IBOutlet var containerView: UIView!
     @IBOutlet var userImageContainerView: UIView!
     @IBOutlet var userImageView: UIImageView!
@@ -11,15 +12,24 @@ class SimpleTableViewCell: UITableViewCell {
     @IBOutlet var likeCountLabel: UILabel!
     @IBOutlet var contentTextLabel: UILabel!
     
+    //        didMoveToSuperview - не работай именно в нем, предложи другие этапы жизненного цикла View
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
-        //        TODO: код выносится в отдельные методы только для переиспользования. тут этого нет
-        //        didMoveToSuperview - не работай именно в нем, предложи другие этапы жизненного цикла View
-        setupCellUI()
-        setupContainerViewUI()
-        setupUserImageContainerViewUI()
-        setupSeparatorUI()
+        
+        backgroundColor = Colors.mainBackground
+        separatorLineView.backgroundColor = Colors.mainBackground
         userImageView.roundCorners()
+        
+        containerView.setShadow(offsetSize: Constants.containerViewShadowOffset,
+                                opacity: Constants.containerViewShadowOpacity,
+                                radius: Constants.containerViewShadowRadius)
+        containerView.roundCorners(radius: Constants.containerViewCornerRadius)
+        
+        userImageContainerView.setShadow(offsetSize: Constants.userImageContainerViewShadowOffset,
+                                opacity: Constants.userImageContainerViewShadowOpacity,
+                                radius: Constants.userImageContainerViewShadowRadius)
+        userImageContainerView.roundCorners()
+        
     }
     
     func fill(model: Message) {
@@ -33,32 +43,7 @@ class SimpleTableViewCell: UITableViewCell {
         dateLabel.text = dateFormatter.string(from: model.date)
     }
     
+    //   нет обработки нажатия на лайках
     @IBAction func likeButtonTapped(_ sender: Any) {
     }
-}
-
-private extension SimpleTableViewCell {
-    
-    func setupCellUI() {
-        self.backgroundColor = Colors.mainBackground
-    }
-    
-    func setupContainerViewUI() {
-        containerView.setShadow(offsetSize: Constants.containerViewShadowOffset,
-                                opacity: Constants.containerViewShadowOpacity,
-                                radius: Constants.containerViewShadowRadius)
-        containerView.roundCorners(radius: Constants.containerViewCornerRadius)
-    }
-    
-    func setupUserImageContainerViewUI() {
-        userImageContainerView.setShadow(offsetSize: Constants.userImageContainerViewShadowOffset,
-                                opacity: Constants.userImageContainerViewShadowOpacity,
-                                radius: Constants.userImageContainerViewShadowRadius)
-        userImageContainerView.roundCorners()
-    }
-    
-    func setupSeparatorUI() {
-        separatorLineView.backgroundColor = Colors.mainBackground
-    }
-    
 }
