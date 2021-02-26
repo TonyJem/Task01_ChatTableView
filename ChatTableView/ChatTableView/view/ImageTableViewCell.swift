@@ -12,10 +12,8 @@ class ImageTableViewCell: SimpleTableViewCell {
     @IBOutlet var postImageContainerView: UIView!
     @IBOutlet var postImageView: UIImageView!
     
-    override func didMoveToSuperview() {
-        
-        //        didMoveToSuperview - не работай именно в нем, предложи другие этапы жизненного цикла View
-        super.didMoveToSuperview()
+    override func awakeFromNib() {
+        super.awakeFromNib()
         
         postImageContainerView.roundCorners(radius: Constants.postImageContainerViewCornerRadius)
         postImageContainerView.setShadow(offsetSize: Constants.postImageContainerViewShadowOffset,

@@ -24,9 +24,8 @@ class SimpleTableViewCell: UITableViewCell {
     @IBOutlet var likeCountLabel: UILabel!
     @IBOutlet var contentTextLabel: UILabel!
     
-    //        didMoveToSuperview - не работай именно в нем, предложи другие этапы жизненного цикла View
-    override func didMoveToSuperview() {
-        super.didMoveToSuperview()
+    override func awakeFromNib() {
+        super.awakeFromNib()
         
         separatorLineView.backgroundColor = Constants.backgrounColor
         backgroundColor = Constants.backgrounColor
