@@ -1,7 +1,6 @@
 import UIKit
 
 class SimpleTableViewCell: UITableViewCell {
-    //    TODO: не делай Outlet private
     @IBOutlet var containerView: UIView!
     @IBOutlet var userImageContainerView: UIView!
     @IBOutlet var userImageView: UIImageView!
