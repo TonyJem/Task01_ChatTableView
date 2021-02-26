@@ -6,11 +6,14 @@ class ImageTableViewCell: SimpleTableViewCell {
     @IBOutlet var postImageView: UIImageView!
     
     override func didMoveToSuperview() {
-        //        TODO: код выносится в отдельные методы только для переиспользования. тут этого нет
+        
         //        didMoveToSuperview - не работай именно в нем, предложи другие этапы жизненного цикла View
         super.didMoveToSuperview()
         
-        setupPostImageContainerUI()
+        postImageContainerView.roundCorners(radius: Constants.postImageContainerViewCornerRadius)
+        postImageContainerView.setShadow(offsetSize: Constants.postImageContainerViewShadowOffset,
+                                         opacity: Constants.postImageContainerViewShadowOpacity,
+                                         radius: Constants.postImageContainerViewShadowRadius)
     }
     
     override func fill(model: Message) {
@@ -18,17 +21,6 @@ class ImageTableViewCell: SimpleTableViewCell {
         
         postImageView.image = model.picture
         postImageView.roundCorners(radius: Constants.postImageViewCornerRadius, clips: true)
-    }
-    
-}
-
-private extension ImageTableViewCell {
-    
-    func setupPostImageContainerUI() {
-        postImageContainerView.setShadow(offsetSize: Constants.postImageContainerViewShadowOffset,
-                                         opacity: Constants.postImageContainerViewShadowOpacity,
-                                         radius: Constants.postImageContainerViewShadowRadius)
-        postImageContainerView.roundCorners(radius: Constants.postImageContainerViewCornerRadius)
     }
     
 }
