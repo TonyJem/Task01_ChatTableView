@@ -21,8 +21,8 @@ class ViewController: UIViewController {
         
         usersTableView.register(UINib(nibName: String(describing: ImageTableViewCell.self), bundle: Bundle.main), forCellReuseIdentifier: String(describing: ImageTableViewCell.self))
         //        TODO: строки 24-27 убрать в настройки .xib
-        mainView.backgroundColor = Colors.mainBackground
-        usersTableView.backgroundColor = Colors.mainBackground
+        mainView.backgroundColor = Colors.mainBackgroundColor
+        usersTableView.backgroundColor = Colors.mainBackgroundColor
         usersTableView.tableFooterView = UIView()
     }
     

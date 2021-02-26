@@ -16,8 +16,8 @@ class SimpleTableViewCell: UITableViewCell {
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
         
-        separatorLineView.backgroundColor = Colors.mainBackground
-        backgroundColor = Colors.mainBackground
+        separatorLineView.backgroundColor = Colors.mainBackgroundColor
+        backgroundColor = Colors.mainBackgroundColor
         userImageView.roundCorners()
         
         containerView.roundCorners(radius: Constants.containerViewCornerRadius)
