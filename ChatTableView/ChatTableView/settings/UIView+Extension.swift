@@ -1,6 +1,9 @@
 import UIKit
 
 extension UIView {
+    private struct Constants {
+        static let shadowColor = UIColor.darkGray.cgColor
+    }
     
     func roundCorners(radius: CGFloat? = nil, clips: Bool? = nil) {
         if let radius = radius {
@@ -14,7 +17,7 @@ extension UIView {
         }
     }
     
-    func setShadow(offsetSize: CGSize = CGSize(width: 5, height: 5), color: CGColor = Colors.shadowColor, opacity: Float = 0.4, radius: CGFloat = 5) {
+    func setShadow(offsetSize: CGSize = CGSize(width: 5, height: 5), color: CGColor = Constants.shadowColor, opacity: Float = 0.4, radius: CGFloat = 5) {
         layer.shadowOffset = offsetSize
         layer.shadowColor = color
         layer.shadowOpacity = opacity

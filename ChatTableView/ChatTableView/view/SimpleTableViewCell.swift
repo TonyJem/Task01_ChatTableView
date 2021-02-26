@@ -2,6 +2,8 @@ import UIKit
 
 class SimpleTableViewCell: UITableViewCell {
     private struct Constants {
+        static let backgrounColor = Colors.mainBackgroundColor
+        
         static let containerViewCornerRadius: CGFloat = 15
         static let containerViewShadowOffset = CGSize(width: 5, height: 5)
         static let containerViewShadowOpacity: Float  = 0.2
@@ -26,8 +28,8 @@ class SimpleTableViewCell: UITableViewCell {
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
         
-        separatorLineView.backgroundColor = Colors.mainBackgroundColor
-        backgroundColor = Colors.mainBackgroundColor
+        separatorLineView.backgroundColor = Constants.backgrounColor
+        backgroundColor = Constants.backgrounColor
         userImageView.roundCorners()
         
         containerView.roundCorners(radius: Constants.containerViewCornerRadius)

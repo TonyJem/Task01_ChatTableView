@@ -1,6 +1,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    private struct Constants {
+        static let backgrounColor = Colors.mainBackgroundColor
+    }
     
     @IBOutlet var mainView: UIView!
     @IBOutlet var usersTableView: UITableView!
@@ -21,8 +24,8 @@ class ViewController: UIViewController {
         
         usersTableView.register(UINib(nibName: String(describing: ImageTableViewCell.self), bundle: Bundle.main), forCellReuseIdentifier: String(describing: ImageTableViewCell.self))
         //        TODO: строки 24-26 убрать в настройки .xib
-        mainView.backgroundColor = Colors.mainBackgroundColor
-        usersTableView.backgroundColor = Colors.mainBackgroundColor
+        mainView.backgroundColor = Constants.backgrounColor
+        usersTableView.backgroundColor = Constants.backgrounColor
         usersTableView.tableFooterView = UIView()
     }
     
