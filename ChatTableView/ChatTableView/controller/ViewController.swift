@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         mainView.backgroundColor = Colors.mainBackground
         usersTableView.backgroundColor = Colors.mainBackground
         usersTableView.tableFooterView = UIView()
-        usersTableView.allowsSelection = false
     }
     
 }
