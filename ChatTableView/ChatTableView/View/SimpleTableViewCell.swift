@@ -19,7 +19,7 @@ class SimpleTableViewCell: UITableViewCell {
         setupContainerViewUI()
         setupUserImageContainerViewUI()
         setupSeparatorUI()
-        setupUserImageViewViewUI()
+        userImageView.turnIntoCircle()
     }
     
     func fill(model: User) {
@@ -64,11 +64,6 @@ private extension SimpleTableViewCell {
     
     func setupSeparatorUI() {
         separatorLineView.backgroundColor = Colors.mainBackground
-    }
-    
-    func setupUserImageViewViewUI() {
-        userImageView.layer.cornerRadius = userImageView.frame.width/2
-        userImageView.clipsToBounds = true
     }
     
 }
