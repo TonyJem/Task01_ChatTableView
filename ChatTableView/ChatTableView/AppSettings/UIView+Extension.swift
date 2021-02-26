@@ -32,7 +32,7 @@ extension UIView {
         layer.shadowOpacity = opacity
         layer.shadowRadius = radius
         
-//        layer.masksToBounds = false
+        layer.masksToBounds = false
         layer.shouldRasterize = true
         layer.rasterizationScale = UIScreen.main.scale
     }
