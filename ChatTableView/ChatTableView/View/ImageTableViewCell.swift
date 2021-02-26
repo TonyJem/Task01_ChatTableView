@@ -11,7 +11,7 @@ class ImageTableViewCell: SimpleTableViewCell {
         setupPostImageContainerUI()
     }
     
-    override func fill(model: User) {
+    override func fill(model: Message) {
         super.fill(model: model)
         
         postImageView.image = model.picture

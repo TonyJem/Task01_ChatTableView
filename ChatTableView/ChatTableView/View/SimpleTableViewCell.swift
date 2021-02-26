@@ -22,9 +22,9 @@ class SimpleTableViewCell: UITableViewCell {
         userImageView.turnIntoCircle()
     }
     
-    func fill(model: User) {
-        nameLabel.text = model.name
-        userImageView.image = model.photo
+    func fill(model: Message) {
+        nameLabel.text = model.username
+        userImageView.image = model.userPhoto
         contentTextLabel.text = model.text
         likeCountLabel.text = "\(model.likeCount ?? 0)"
         

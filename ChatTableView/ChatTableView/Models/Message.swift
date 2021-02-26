@@ -1,9 +1,9 @@
 import UIKit
 
-struct User {
-    let name: String
+struct Message {
+    let username: String
     let date: Date
-    let photo: UIImage?
+    let userPhoto: UIImage?
     let text: String?
     let likeCount: Int?
     let picture: UIImage?
