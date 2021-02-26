@@ -43,8 +43,8 @@
                                     <constraint firstAttribute="height" constant="2" id="g27-aE-4TN"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Gg-3x-6rk">
-                                <rect key="frame" x="90" y="62" width="269" height="86"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Gg-3x-6rk">
+                                <rect key="frame" x="90" y="62" width="199" height="86"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -75,8 +75,8 @@
                                     <action selector="likeButtonTapped:" destination="GzP-RS-Suo" eventType="touchUpInside" id="Wsg-CY-PCh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ata-lT-Yw1">
-                                <rect key="frame" x="45" y="105" width="0.0" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="555" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ata-lT-Yw1">
+                                <rect key="frame" x="30" y="105" width="30.5" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="V5M-00-2wV"/>
                                 </constraints>
@@ -84,29 +84,41 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apK-My-o5Y">
+                                <rect key="frame" x="294" y="62" width="65" height="65"/>
+                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="5ED-ot-bQz"/>
+                                    <constraint firstAttribute="width" secondItem="apK-My-o5Y" secondAttribute="height" multiplier="1:1" id="tmc-YD-pFT"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="LTT-xY-g4Z" firstAttribute="leading" secondItem="T9N-em-aAs" secondAttribute="leading" id="0zh-2Z-gS5"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1Gg-3x-6rk" secondAttribute="trailing" constant="15" id="1DB-Nh-ucb"/>
                             <constraint firstAttribute="trailing" secondItem="T9N-em-aAs" secondAttribute="trailing" constant="15" id="1Qd-0a-yOz"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ata-lT-Yw1" secondAttribute="bottom" constant="10" id="2nu-ng-F9g"/>
                             <constraint firstItem="ata-lT-Yw1" firstAttribute="top" secondItem="fyo-iL-qbq" secondAttribute="bottom" id="3Zm-LH-kbD"/>
-                            <constraint firstAttribute="trailing" secondItem="1Gg-3x-6rk" secondAttribute="trailing" constant="15" id="EqL-nI-bMG"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="apK-My-o5Y" secondAttribute="bottom" constant="10" id="8ec-0N-Yr5"/>
+                            <constraint firstItem="1Gg-3x-6rk" firstAttribute="top" secondItem="5UV-Wh-0YV" secondAttribute="bottom" constant="10" id="9gA-JE-BYf"/>
+                            <constraint firstItem="apK-My-o5Y" firstAttribute="top" secondItem="5UV-Wh-0YV" secondAttribute="bottom" constant="10" id="CGn-OU-csr"/>
                             <constraint firstAttribute="trailing" secondItem="5UV-Wh-0YV" secondAttribute="trailing" constant="15" id="Fb5-dx-9P5"/>
                             <constraint firstItem="T9N-em-aAs" firstAttribute="leading" secondItem="TPc-Lv-Fm8" secondAttribute="trailing" constant="15" id="JvW-K9-GyC"/>
+                            <constraint firstAttribute="bottom" secondItem="1Gg-3x-6rk" secondAttribute="bottom" constant="10" id="KBD-TE-wqF"/>
                             <constraint firstItem="ata-lT-Yw1" firstAttribute="centerX" secondItem="fyo-iL-qbq" secondAttribute="centerX" id="LUT-fU-FvA"/>
-                            <constraint firstItem="1Gg-3x-6rk" firstAttribute="leading" secondItem="5UV-Wh-0YV" secondAttribute="leading" id="RGL-qq-e6o"/>
                             <constraint firstItem="5UV-Wh-0YV" firstAttribute="top" secondItem="LTT-xY-g4Z" secondAttribute="bottom" constant="20" id="XN9-Ke-6Jy"/>
                             <constraint firstItem="fyo-iL-qbq" firstAttribute="centerX" secondItem="ahy-pR-J9Z" secondAttribute="centerX" id="Z1X-bW-qZB"/>
                             <constraint firstItem="TPc-Lv-Fm8" firstAttribute="top" secondItem="kC6-M1-B7U" secondAttribute="top" constant="5" id="aIW-Y6-g7r"/>
                             <constraint firstItem="LTT-xY-g4Z" firstAttribute="top" secondItem="T9N-em-aAs" secondAttribute="bottom" id="ba7-hL-NO5"/>
-                            <constraint firstAttribute="bottom" secondItem="1Gg-3x-6rk" secondAttribute="bottom" constant="10" id="dm6-vf-5Fr"/>
+                            <constraint firstItem="apK-My-o5Y" firstAttribute="leading" secondItem="1Gg-3x-6rk" secondAttribute="trailing" constant="5" id="gm7-TA-8TT"/>
                             <constraint firstAttribute="trailing" secondItem="LTT-xY-g4Z" secondAttribute="trailing" constant="15" id="hs8-gc-Pmm"/>
                             <constraint firstItem="TPc-Lv-Fm8" firstAttribute="leading" secondItem="kC6-M1-B7U" secondAttribute="leading" constant="15" id="k5J-v8-Gh1"/>
                             <constraint firstItem="5UV-Wh-0YV" firstAttribute="leading" secondItem="LTT-xY-g4Z" secondAttribute="leading" id="k8T-XV-lcY"/>
                             <constraint firstItem="fyo-iL-qbq" firstAttribute="top" secondItem="TPc-Lv-Fm8" secondAttribute="bottom" id="pm6-6G-tXG"/>
-                            <constraint firstItem="1Gg-3x-6rk" firstAttribute="top" secondItem="5UV-Wh-0YV" secondAttribute="bottom" constant="10" id="qMC-Ki-2Eo"/>
                             <constraint firstItem="T9N-em-aAs" firstAttribute="top" secondItem="kC6-M1-B7U" secondAttribute="top" constant="10" id="thG-U4-RoI"/>
+                            <constraint firstAttribute="trailing" secondItem="apK-My-o5Y" secondAttribute="trailing" constant="15" id="wTG-D0-bTu"/>
+                            <constraint firstItem="1Gg-3x-6rk" firstAttribute="leading" secondItem="5UV-Wh-0YV" secondAttribute="leading" id="xd2-El-SaC"/>
                         </constraints>
                     </view>
                 </subviews>
