@@ -80,6 +80,9 @@
                                     <constraint firstAttribute="width" constant="40" id="JiZ-dB-BCf"/>
                                 </constraints>
                                 <state key="normal" title="👍"/>
+                                <connections>
+                                    <action selector="likeButtonTapped:" destination="rt1-wG-b2v" eventType="touchUpInside" id="Cwt-8Y-vWm"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATh-nx-KNP">
                                 <rect key="frame" x="90" y="150" width="269" height="269"/>
