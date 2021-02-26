@@ -2,15 +2,15 @@ import UIKit
 
 class SimpleTableViewCell: UITableViewCell {
     //    TODO: не делай Outlet private
-    @IBOutlet private var containerView: UIView!
-    @IBOutlet private var userImageContainerView: UIView!
-    @IBOutlet private var userImageView: UIImageView!
-    @IBOutlet private var nameLabel: UILabel!
-    @IBOutlet private var dateLabel: UILabel!
-    @IBOutlet private var separatorLineView: UIView!
-    @IBOutlet private var likeButton: UIButton!
-    @IBOutlet private var likeCountLabel: UILabel!
-    @IBOutlet private var contentTextLabel: UILabel!
+    @IBOutlet var containerView: UIView!
+    @IBOutlet var userImageContainerView: UIView!
+    @IBOutlet var userImageView: UIImageView!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var separatorLineView: UIView!
+    @IBOutlet var likeButton: UIButton!
+    @IBOutlet var likeCountLabel: UILabel!
+    @IBOutlet var contentTextLabel: UILabel!
     
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
@@ -34,7 +34,7 @@ class SimpleTableViewCell: UITableViewCell {
         dateLabel.text = dateFormatter.string(from: model.date)
     }
     
-    @IBAction private func likeButtonTapped(_ sender: Any) {
+    @IBAction func likeButtonTapped(_ sender: Any) {
     }
 }
 

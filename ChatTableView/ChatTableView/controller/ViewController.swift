@@ -2,8 +2,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet private var mainView: UIView!
-    @IBOutlet private var usersTableView: UITableView!
+    @IBOutlet var mainView: UIView!
+    @IBOutlet var usersTableView: UITableView!
     
     //    TODO: testData
     private let list: [Message] = [

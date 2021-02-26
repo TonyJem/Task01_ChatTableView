@@ -2,8 +2,8 @@ import UIKit
 
 class ImageTableViewCell: SimpleTableViewCell {
     
-    @IBOutlet private var postImageContainerView: UIView!
-    @IBOutlet private var postImageView: UIImageView!
+    @IBOutlet var postImageContainerView: UIView!
+    @IBOutlet var postImageView: UIImageView!
     
     override func didMoveToSuperview() {
         //        TODO: код выносится в отдельные методы только для переиспользования. тут этого нет
