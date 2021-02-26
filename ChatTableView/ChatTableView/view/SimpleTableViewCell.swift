@@ -52,7 +52,7 @@ class SimpleTableViewCell: UITableViewCell {
         nameLabel.text = model.username
         userImageView.image = model.userPhoto
         contentTextLabel.text = model.text
-        likeCountLabel.text = "\(model.likeCount ?? 0)"
+        likeCountLabel.text = "\(model.likeCount)"
         
         let dateFormatter = DateFormatter()
         dateFormatter.timeStyle = .short
@@ -60,7 +60,6 @@ class SimpleTableViewCell: UITableViewCell {
     }
     
     @IBAction func likeButtonTapped(_ sender: Any) {
-        print("🟢 Button in Xib Tapped")
         delegate?.onLikeButton(cell: self)
     }
 }
