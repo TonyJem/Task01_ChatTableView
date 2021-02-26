@@ -1,6 +1,16 @@
 import UIKit
 
 class SimpleTableViewCell: UITableViewCell {
+    private struct Constants {
+        static let containerViewCornerRadius: CGFloat = 15
+        static let containerViewShadowOffset = CGSize(width: 5, height: 5)
+        static let containerViewShadowOpacity: Float  = 0.2
+        static let containerViewShadowRadius: CGFloat = 5
+        
+        static let userImageContainerViewShadowOffset = CGSize(width: 10, height: 10)
+        static let userImageContainerViewShadowOpacity: Float = 0.4
+        static let userImageContainerViewShadowRadius: CGFloat = 8
+    }
     
     @IBOutlet var containerView: UIView!
     @IBOutlet var userImageContainerView: UIView!
@@ -27,8 +37,8 @@ class SimpleTableViewCell: UITableViewCell {
         
         userImageContainerView.roundCorners()
         userImageContainerView.setShadow(offsetSize: Constants.userImageContainerViewShadowOffset,
-                                opacity: Constants.userImageContainerViewShadowOpacity,
-                                radius: Constants.userImageContainerViewShadowRadius)
+                                         opacity: Constants.userImageContainerViewShadowOpacity,
+                                         radius: Constants.userImageContainerViewShadowRadius)
     }
     
     func fill(model: Message) {
