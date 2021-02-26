@@ -24,6 +24,6 @@ struct Constants {
     
     
     // MARK: - PostImageContainerViewUI
-    static let postImageViewCornerRadius: CGFloat = 10
+    static let postImageViewCornerRadius: CGFloat = Constants.postImageContainerViewCornerRadius
     
 }
