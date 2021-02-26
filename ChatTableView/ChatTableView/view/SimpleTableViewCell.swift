@@ -16,20 +16,19 @@ class SimpleTableViewCell: UITableViewCell {
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
         
-        backgroundColor = Colors.mainBackground
         separatorLineView.backgroundColor = Colors.mainBackground
+        backgroundColor = Colors.mainBackground
         userImageView.roundCorners()
         
+        containerView.roundCorners(radius: Constants.containerViewCornerRadius)
         containerView.setShadow(offsetSize: Constants.containerViewShadowOffset,
                                 opacity: Constants.containerViewShadowOpacity,
                                 radius: Constants.containerViewShadowRadius)
-        containerView.roundCorners(radius: Constants.containerViewCornerRadius)
         
+        userImageContainerView.roundCorners()
         userImageContainerView.setShadow(offsetSize: Constants.userImageContainerViewShadowOffset,
                                 opacity: Constants.userImageContainerViewShadowOpacity,
                                 radius: Constants.userImageContainerViewShadowRadius)
-        userImageContainerView.roundCorners()
-        
     }
     
     func fill(model: Message) {
