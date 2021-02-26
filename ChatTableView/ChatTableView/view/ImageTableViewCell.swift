@@ -17,7 +17,7 @@ class ImageTableViewCell: SimpleTableViewCell {
         super.fill(model: model)
         
         postImageView.image = model.picture
-        postImageView.roundCornersAndClip(with: Constants.postImageViewCornerRadius)
+        postImageView.roundCorners(radius: Constants.postImageViewCornerRadius, clips: true)
     }
     
 }
@@ -28,7 +28,7 @@ private extension ImageTableViewCell {
         postImageContainerView.setShadow(offsetSize: Constants.postImageContainerViewShadowOffset,
                                          opacity: Constants.postImageContainerViewShadowOpacity,
                                          radius: Constants.postImageContainerViewShadowRadius)
-        postImageContainerView.roundCornersAndClip(with: Constants.postImageContainerViewCornerRadius)
+        postImageContainerView.roundCorners(radius: Constants.postImageContainerViewCornerRadius)
     }
     
 }

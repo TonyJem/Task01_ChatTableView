@@ -20,7 +20,7 @@ class SimpleTableViewCell: UITableViewCell {
         setupContainerViewUI()
         setupUserImageContainerViewUI()
         setupSeparatorUI()
-        userImageView.turnIntoCircle()
+        userImageView.roundCorners()
     }
     
     func fill(model: Message) {
@@ -48,14 +48,14 @@ private extension SimpleTableViewCell {
         containerView.setShadow(offsetSize: Constants.containerViewShadowOffset,
                                 opacity: Constants.containerViewShadowOpacity,
                                 radius: Constants.containerViewShadowRadius)
-        containerView.roundCorners(with: Constants.containerViewCornerRadius)
+        containerView.roundCorners(radius: Constants.containerViewCornerRadius)
     }
     
     func setupUserImageContainerViewUI() {
         userImageContainerView.setShadow(offsetSize: Constants.userImageContainerViewShadowOffset,
                                 opacity: Constants.userImageContainerViewShadowOpacity,
                                 radius: Constants.userImageContainerViewShadowRadius)
-        userImageContainerView.turnIntoCircle()
+        userImageContainerView.roundCorners()
     }
     
     func setupSeparatorUI() {

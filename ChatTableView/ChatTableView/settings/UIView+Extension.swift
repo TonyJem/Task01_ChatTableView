@@ -1,32 +1,17 @@
 import UIKit
 
 extension UIView {
-    /*    TODO:
-         1. 4ре нижних метода - избыточный код. По сути я могу заменить их все на
-         func roundCorners(radius: CGFloat, clips: Bool? = nil) {
-                 self.layer.cornerRadius = radius
-                 if clips != nil {
-                    self.clipsToBounds = clips
-                }
-             }
-         2. func roundCorners(with radius: CGFloat) { == with это не внешнее имя radius
-        */
-    func roundCorners(with radius: CGFloat) {
-        self.layer.cornerRadius = radius
-    }
     
-    func roundCornersAndClip(with radius: CGFloat) {
-        self.layer.cornerRadius = radius
-        self.clipsToBounds = true
-    }
-    
-    func turnIntoCircle() {
-        self.layer.cornerRadius = self.frame.width/2
-    }
-    
-    func turnIntoCircleAndClip() {
-        self.layer.cornerRadius = self.frame.width/2
-        self.clipsToBounds = true
+    func roundCorners(radius: CGFloat? = nil, clips: Bool? = nil) {
+        if let radius = radius {
+            layer.cornerRadius = radius
+        } else {
+            layer.cornerRadius = frame.width/2
+        }
+        
+        if let clips = clips {
+            clipsToBounds = clips
+        }
     }
     
     //    TODO: 1. перенос на новую строку только если не влазит
