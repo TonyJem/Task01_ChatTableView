@@ -44,22 +44,17 @@ private extension SimpleTableViewCell {
     }
     
     func setupContainerViewUI() {
-        let layer = containerView.layer
-        layer.cornerRadius = Constants.containerViewCornerRadius
-        layer.masksToBounds = Constants.containerViewMasksToBounds
-        layer.shadowColor = Constants.containerViewShadowColor
-        layer.shadowRadius = Constants.containerViewShadowRadius
-        layer.shadowOpacity = Constants.containerViewShadowOpacity
-        layer.shadowOffset = Constants.containerViewShadowOffset
+        containerView.setShadow(offsetSize: Constants.containerViewShadowOffset,
+                                opacity: Constants.containerViewShadowOpacity,
+                                radius: Constants.containerViewShadowRadius)
+        containerView.roundCorners(with: Constants.containerViewCornerRadius)
     }
     
     func setupUserImageContainerViewUI() {
-        let layer = userImageContainerView.layer
-        layer.cornerRadius = userImageContainerView.frame.width/2
-        layer.shadowColor = Constants.userImageContainerViewShadowColor
-        layer.shadowRadius = Constants.userImageContainerViewShadowRadius
-        layer.shadowOpacity = Constants.userImageContainerViewShadowOpacity
-        layer.shadowOffset = Constants.userImageContainerViewShadowOffset
+        userImageContainerView.setShadow(offsetSize: Constants.userImageContainerViewShadowOffset,
+                                opacity: Constants.userImageContainerViewShadowOpacity,
+                                radius: Constants.userImageContainerViewShadowRadius)
+        userImageContainerView.turnIntoCircle()
     }
     
     func setupSeparatorUI() {

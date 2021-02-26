@@ -15,7 +15,7 @@ class ImageTableViewCell: SimpleTableViewCell {
         super.fill(model: model)
         
         postImageView.image = model.picture
-        postImageView.setCorrnerRadiusAndClip(with: Constants.postImageViewCornerRadius)
+        postImageView.roundCornersAndClip(with: Constants.postImageViewCornerRadius)
     }
     
 }
@@ -23,12 +23,10 @@ class ImageTableViewCell: SimpleTableViewCell {
 private extension ImageTableViewCell {
     
     func setupPostImageContainerUI() {
-        let layer = postImageContainerView.layer
-        layer.cornerRadius = Constants.postImageContainerViewCornerRadius
-        layer.shadowColor = Constants.postImageContainerViewShadowColor
-        layer.shadowRadius = Constants.postImageContainerViewShadowRadius
-        layer.shadowOpacity = Constants.postImageContainerViewShadowOpacity
-        layer.shadowOffset = Constants.postImageContainerViewShadowOffset
+        postImageContainerView.setShadow(offsetSize: Constants.postImageContainerViewShadowOffset,
+                                         opacity: Constants.postImageContainerViewShadowOpacity,
+                                         radius: Constants.postImageContainerViewShadowRadius)
+        postImageContainerView.roundCornersAndClip(with: Constants.postImageContainerViewCornerRadius)
     }
     
 }
