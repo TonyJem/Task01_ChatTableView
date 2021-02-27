@@ -49,6 +49,7 @@ extension ViewController: MessageCellDelegate {
     func onLikeButton(cell: SimpleTableViewCell) {
         guard let indexPath = usersTableView.indexPath(for: cell) else { return }
         model.updateLikeCount(at: indexPath.row)
+        cell.isAlreadyLiked = model.messages[indexPath.row].isAlreadyLiked
         usersTableView.reloadData()
     }
 }

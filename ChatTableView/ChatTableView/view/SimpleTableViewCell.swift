@@ -4,7 +4,11 @@ protocol MessageCellDelegate {
     func onLikeButton(cell: SimpleTableViewCell)
 }
 
-class SimpleTableViewCell: UITableViewCell {
+protocol Likable {
+    var isAlreadyLiked: Bool {get set}
+}
+
+class SimpleTableViewCell: UITableViewCell, Likable {
     private struct Constants {
         static let backgrounColor = Colors.mainBackgroundColor
         
@@ -27,8 +31,16 @@ class SimpleTableViewCell: UITableViewCell {
     @IBOutlet var likeButton: UIButton!
     @IBOutlet var likeCountLabel: UILabel!
     @IBOutlet var contentTextLabel: UILabel!
+    @IBOutlet var isAlreadyLikedView: UIView!
     
     var delegate: MessageCellDelegate?
+    
+    var isAlreadyLiked: Bool = false {
+        didSet {
+            isAlreadyLikedView.isHidden = !isAlreadyLiked
+            
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,6 +48,7 @@ class SimpleTableViewCell: UITableViewCell {
         separatorLineView.backgroundColor = Constants.backgrounColor
         backgroundColor = Constants.backgrounColor
         userImageView.roundCorners()
+        isAlreadyLikedView.roundCorners()
         
         containerView.roundCorners(radius: Constants.containerViewCornerRadius)
         containerView.setShadow(offsetSize: Constants.containerViewShadowOffset,
