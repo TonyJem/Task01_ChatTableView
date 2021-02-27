@@ -44,7 +44,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Gg-3x-6rk">
-                                <rect key="frame" x="90" y="62" width="269" height="86"/>
+                                <rect key="frame" x="90" y="62" width="194" height="86"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -84,6 +84,14 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WOa-yf-qAd">
+                                <rect key="frame" x="294" y="62" width="65" height="65"/>
+                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WOa-yf-qAd" secondAttribute="height" multiplier="1:1" id="vwe-rn-wAN"/>
+                                    <constraint firstAttribute="width" constant="65" id="wh4-bS-FSp"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -91,8 +99,10 @@
                             <constraint firstAttribute="trailing" secondItem="T9N-em-aAs" secondAttribute="trailing" constant="15" id="1Qd-0a-yOz"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ata-lT-Yw1" secondAttribute="bottom" constant="10" id="2nu-ng-F9g"/>
                             <constraint firstItem="ata-lT-Yw1" firstAttribute="top" secondItem="fyo-iL-qbq" secondAttribute="bottom" id="3Zm-LH-kbD"/>
-                            <constraint firstAttribute="trailing" secondItem="1Gg-3x-6rk" secondAttribute="trailing" constant="15" id="EqL-nI-bMG"/>
+                            <constraint firstAttribute="trailing" secondItem="1Gg-3x-6rk" secondAttribute="trailing" constant="90" id="EqL-nI-bMG"/>
+                            <constraint firstItem="WOa-yf-qAd" firstAttribute="top" secondItem="5UV-Wh-0YV" secondAttribute="bottom" constant="10" id="Ewc-41-i4k"/>
                             <constraint firstAttribute="trailing" secondItem="5UV-Wh-0YV" secondAttribute="trailing" constant="15" id="Fb5-dx-9P5"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="WOa-yf-qAd" secondAttribute="bottom" constant="10" id="HYw-zI-ivm"/>
                             <constraint firstItem="T9N-em-aAs" firstAttribute="leading" secondItem="TPc-Lv-Fm8" secondAttribute="trailing" constant="15" id="JvW-K9-GyC"/>
                             <constraint firstItem="ata-lT-Yw1" firstAttribute="centerX" secondItem="fyo-iL-qbq" secondAttribute="centerX" id="LUT-fU-FvA"/>
                             <constraint firstItem="1Gg-3x-6rk" firstAttribute="leading" secondItem="5UV-Wh-0YV" secondAttribute="leading" id="RGL-qq-e6o"/>
@@ -107,6 +117,7 @@
                             <constraint firstItem="fyo-iL-qbq" firstAttribute="top" secondItem="TPc-Lv-Fm8" secondAttribute="bottom" id="pm6-6G-tXG"/>
                             <constraint firstItem="1Gg-3x-6rk" firstAttribute="top" secondItem="5UV-Wh-0YV" secondAttribute="bottom" constant="10" id="qMC-Ki-2Eo"/>
                             <constraint firstItem="T9N-em-aAs" firstAttribute="top" secondItem="kC6-M1-B7U" secondAttribute="top" constant="10" id="thG-U4-RoI"/>
+                            <constraint firstAttribute="trailing" secondItem="WOa-yf-qAd" secondAttribute="trailing" constant="15" id="w5i-Ta-txw"/>
                         </constraints>
                     </view>
                 </subviews>
